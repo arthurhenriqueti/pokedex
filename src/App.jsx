@@ -1,7 +1,9 @@
+import NewRoutes from "./Routes";
+
 const App = () => {
     return (
         <>
-            <h1>Hello World</h1>
+            <NewRoutes />
         </>
     );
 };
