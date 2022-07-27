@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { api } from "../services/api";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Card from "../components/Card";
 import "./Home.scss";
 
 const Home = () => {
@@ -25,10 +26,9 @@ const Home = () => {
         <>
             <Header />
             <main className="home-background">
-                <h1>Página Home</h1>
                 <div className="home-pokemons-area container">
                     {pokemons?.map((pokemon, index) => (
-                        <p>{pokemon.name}</p>
+                        <Card key={index} pokemon={pokemon} />
                     ))}
                 </div>
             </main>

@@ -1,0 +1,41 @@
+.card-background {
+    height: 350px;
+    width: 250px;
+    background-color: #5d449f;
+    border-radius: 5px;
+
+    .card-area {
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            background-color: #d60909;
+            border-radius: 5px;
+            padding: 2px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        h1 {
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        span {
+            color: #fff;
+            background-color: #d60909;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .card-image {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
