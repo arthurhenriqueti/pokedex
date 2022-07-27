@@ -8,6 +8,10 @@
         justify-content: flex-start;
         align-items: center;
 
+        @media (max-width: 1200px) {
+            padding: 0px 10px;
+        }
+
         h1 {
             color: #fff;
             font-size: 38px;

@@ -19,7 +19,12 @@ const Card = (props) => {
                         </figure>
                     </div>
                     <div>
-                        <span>Detalhes</span>
+                        <Link
+                            to={`/pokemon/${props.pokemon.id}`}
+                            className="link"
+                        >
+                            <span>Detalhes</span>
+                        </Link>
                     </div>
                 </div>
             </div>

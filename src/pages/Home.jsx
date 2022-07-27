@@ -7,15 +7,18 @@ import "./Home.scss";
 
 const Home = () => {
     const [pokemons, setPokemons] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const getPokemons = async () => {
+        setLoading(true);
         let newArray = [];
         for (let i = 1; i <= 50; i++) {
             await api.get(`${i}`).then((response) => {
-                return (newArray = [...newArray, response.data]);
+                newArray = [...newArray, response.data];
             });
         }
         setPokemons(newArray);
+        setLoading(false);
     };
 
     useEffect(() => {
@@ -26,11 +29,15 @@ const Home = () => {
         <>
             <Header />
             <main className="home-background">
-                <div className="home-pokemons-area container">
-                    {pokemons?.map((pokemon, index) => (
-                        <Card key={index} pokemon={pokemon} />
-                    ))}
-                </div>
+                {loading ? (
+                    <div className="container">Carregando...</div>
+                ) : (
+                    <div className="home-pokemons-area container">
+                        {pokemons?.map((pokemon, index) => (
+                            <Card key={index} pokemon={pokemon} />
+                        ))}
+                    </div>
+                )}
             </main>
             <Footer />
         </>
