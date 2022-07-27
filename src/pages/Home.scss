@@ -1,13 +1,15 @@
 .home-background {
     min-height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .home-pokemons-area {
         margin-top: 20px;
         margin-bottom: 20px;
-        padding: 0px 10px;
         display: grid;
-        gap: 20px 0px;
-        grid-template-columns: repeat(4, 300px);
+        gap: 20px;
+        grid-template-columns: repeat(4, 250px);
 
         @media (max-width: 1200px) {
             grid-template-columns: repeat(3, 1fr);
