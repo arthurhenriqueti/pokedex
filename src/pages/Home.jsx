@@ -9,12 +9,12 @@ const Home = () => {
 
     const getPokemons = async () => {
         let newArray = [];
-        for (let i = 1; i <= 20; i++) {
+        for (let i = 1; i <= 50; i++) {
             await api.get(`${i}`).then((response) => {
                 return (newArray = [...newArray, response.data]);
             });
         }
-        setPokemons[newArray];
+        setPokemons(newArray);
     };
 
     useEffect(() => {
