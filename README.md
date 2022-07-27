@@ -16,4 +16,4 @@ https://pokeapi.co/
 
 # Descrição do Projeto
 
-A finalidade do projeto é consumir uma API e exibir os pokemons. [Visualizar Projeto](https://pokenext-zeta.vercel.app/)
+A finalidade do projeto é consumir uma API e exibir os pokemons. [Visualizar Projeto](https://pokedex-wine-tau.vercel.app/)
