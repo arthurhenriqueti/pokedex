@@ -1,0 +1,17 @@
+.header-background {
+    height: 90px;
+    background-color: #5d449f;
+
+    .header-area {
+        height: inherit;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            color: #fff;
+            font-size: 38px;
+            margin-right: 10px;
+        }
+    }
+}
