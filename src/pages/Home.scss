@@ -1,8 +1,31 @@
 .home-background {
     min-height: calc(100vh - 180px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .home-search-pokemon {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            font-size: 18px;
+            width: 250px;
+            height: 40px;
+            outline: none;
+        }
+
+        .home-btn-search {
+            width: 40px;
+            height: 40px;
+            background-color: #5d449f;
+            border: 0;
+            cursor: pointer;
+        }
+    }
 
     .home-pokemons-area {
         margin-top: 20px;

@@ -48,7 +48,7 @@ const Pokemon = () => {
                     {pokemon.types ? (
                         <div className="pokemon-types">
                             <span>{pokemon.types[0].type.name}</span>
-                            {pokemon.types[1].type.name ? (
+                            {pokemon.types[1] ? (
                                 <span>{pokemon.types[1].type.name}</span>
                             ) : (
                                 <></>

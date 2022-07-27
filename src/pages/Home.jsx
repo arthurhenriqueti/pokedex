@@ -3,11 +3,16 @@ import { api } from "../services/api";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import { BsSearch } from "react-icons/bs";
+import { useNavigate, Link } from "react-router-dom";
 import "./Home.scss";
 
 const Home = () => {
     const [pokemons, setPokemons] = useState([]);
+    const [pokemon, setPokemon] = useState("");
     const [loading, setLoading] = useState(false);
+
+    let navigate = useNavigate();
 
     const getPokemons = async () => {
         setLoading(true);
@@ -25,10 +30,27 @@ const Home = () => {
         getPokemons();
     }, []);
 
+    const saveName = (e) => {
+        setPokemon(e.target.value);
+    };
+
     return (
         <>
             <Header />
             <main className="home-background">
+                <div className="home-search-pokemon">
+                    <input
+                        type="text"
+                        placeholder="Digite aqui o pokemon..."
+                        id="search-pokemon"
+                        onChange={saveName}
+                    />
+                    <Link to={`/pokemon/${pokemon}`}>
+                        <button className="home-btn-search">
+                            <BsSearch size={24} color={"#fff"} />
+                        </button>
+                    </Link>
+                </div>
                 {loading ? (
                     <div className="container">Carregando...</div>
                 ) : (
