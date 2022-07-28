@@ -27,8 +27,12 @@
         }
 
         .pokemon-types {
-            &:nth-child(n) {
-                text-transform: capitalize;
+            display: flex;
+            gap: 0px 10px;
+
+            .pokemon-type-1,
+            .pokemon-type-2 {
+                text-transform: uppercase;
             }
         }
 
