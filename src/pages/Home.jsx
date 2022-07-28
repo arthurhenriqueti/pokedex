@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import { BsSearch } from "react-icons/bs";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 const Home = () => {
@@ -12,12 +12,10 @@ const Home = () => {
     const [pokemon, setPokemon] = useState("");
     const [loading, setLoading] = useState(false);
 
-    let navigate = useNavigate();
-
     const getPokemons = async () => {
         setLoading(true);
         let newArray = [];
-        for (let i = 1; i <= 50; i++) {
+        for (let i = 1; i <= 200; i++) {
             await api.get(`${i}`).then((response) => {
                 newArray = [...newArray, response.data];
             });
