@@ -43,7 +43,7 @@ const Home = () => {
                         id="search-pokemon"
                         onChange={saveName}
                     />
-                    <Link to={`/pokemon/${pokemon}`}>
+                    <Link to={`/pokemon/${pokemon.toLowerCase()}`}>
                         <button className="home-btn-search">
                             <BsSearch size={24} color={"#fff"} />
                         </button>
